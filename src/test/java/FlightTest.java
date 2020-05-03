@@ -15,7 +15,7 @@ public class FlightTest {
 
     @Before
     public void setup() {
-        plane = new Plane(PlaneType.BOEING747);
+        plane = new Plane(PlaneType.BOEING737);
         flight = new Flight(plane, "AZ9823", "CAG", "EDIN", "10:00");
         passenger1 = new Passenger("Marty McFly", 3);
         passenger2 = new Passenger("Doc", 1);
@@ -65,7 +65,7 @@ public class FlightTest {
         flight.add(passenger2);
         flight.add(passenger3);
         flight.add(passenger4);
-        assertEquals(56, flight.getAvailableSeats());
+        assertEquals(176, flight.getAvailableSeats());
     }
 
     @Test
