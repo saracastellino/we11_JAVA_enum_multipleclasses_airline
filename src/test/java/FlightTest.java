@@ -79,7 +79,8 @@ public class FlightTest {
     @Test
     public void canNotBookSeat() {
         plane = new Plane(PlaneType.CESSNA);
-        Flight flight1 = new Flight(plane, "BH9823", "CAG", "OLB", "15:00");
+        Flight flight1 = new Flight(plane, "BH9823", "CAG", "OLB",
+                "15:00");
         flight1.bookSeat(passenger1);
         flight1.bookSeat(passenger2);
         flight1.bookSeat(passenger3);

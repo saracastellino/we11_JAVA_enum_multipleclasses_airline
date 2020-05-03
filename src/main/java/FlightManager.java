@@ -20,7 +20,7 @@ public class FlightManager {
         return maxBagsWeightForPassenger;
     }
 
-    public int maxBagsWeightForBookedPassenger() {
+    public int bagsBookedWeight() {
         int total = 0;
         for (Passenger passenger : this.getPassengers()) {
             total += maxBagsWeightForPassenger();
@@ -28,9 +28,9 @@ public class FlightManager {
         return total;
     }
 
-    public int bagsWeightLeft() {
+    public int bagsReservedWeightLeft() {
         int maxBagsWeightforFlight = maxBagsWeightForPassenger() * plane.getCapacity();
-        return maxBagsWeightforFlight - maxBagsWeightForBookedPassenger();
+        return maxBagsWeightforFlight - bagsBookedWeight();
     }
 
 }

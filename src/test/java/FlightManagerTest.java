@@ -27,22 +27,22 @@ public class FlightManagerTest {
     }
 
     @Test
-    public void checkBagsWeightForPassenger() {
+    public void checkMaxBagsWeightForPassenger() {
         assertEquals(16, flightManager.maxBagsWeightForPassenger());
     }
 
     @Test
-    public void checkBagsWeightForBookedPassenger() {
+    public void checkBagsmaxBagsBookedWeightWeight() {
         flight.add(passenger1);
         flight.add(passenger2);
         flight.add(passenger3);
-        assertEquals(48, flightManager.maxBagsWeightForBookedPassenger());
+        assertEquals(48, flightManager.bagsBookedWeight());
     }
 
     @Test
-    public void checkBagsWeightLeft() {
+    public void checkBagsReservedWeightLeft() {
         flight.add(passenger1);
         flight.add(passenger2);
-        assertEquals(16, flightManager.bagsWeightLeft());
+        assertEquals(16, flightManager.bagsReservedWeightLeft());
     }
 }
