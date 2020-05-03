@@ -21,16 +21,17 @@ public class FlightManager {
     }
 
     public int maxBagsWeightForBookedPassenger() {
-        return maxBagsWeightForPassenger() * flight.getPassengers().size();
-//        or for loop
+        int total = 0;
+        for (Passenger passenger : this.getPassengers()) {
+            total += maxBagsWeightForPassenger();
+        }
+        return total;
     }
 
     public int bagsWeightLeft() {
-    return maxBagsWeightForPassenger() * plane.getCapacity() - maxBagsWeightForPassenger() * flight.getPassengers().size();
+        int maxBagsWeightforFlight = maxBagsWeightForPassenger() * plane.getCapacity();
+        return maxBagsWeightforFlight - maxBagsWeightForBookedPassenger();
     }
+
 }
 
-/*
-
-
-*/

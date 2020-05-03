@@ -10,7 +10,6 @@ public class FlightManagerTest {
     Passenger passenger1;
     Passenger passenger2;
     Passenger passenger3;
-    Passenger passenger4;
 
     @Before
     public void setup() {
@@ -28,12 +27,12 @@ public class FlightManagerTest {
     }
 
     @Test
-    public void checkBagsWeightForPassenger(){
+    public void checkBagsWeightForPassenger() {
         assertEquals(16, flightManager.maxBagsWeightForPassenger());
     }
 
     @Test
-    public void checkBagsWeightForBookedPassenger(){
+    public void checkBagsWeightForBookedPassenger() {
         flight.add(passenger1);
         flight.add(passenger2);
         flight.add(passenger3);
@@ -41,12 +40,9 @@ public class FlightManagerTest {
     }
 
     @Test
-    public void checkBagsWeightLeft(){
+    public void checkBagsWeightLeft() {
         flight.add(passenger1);
         flight.add(passenger2);
         assertEquals(16, flightManager.bagsWeightLeft());
     }
 }
-
-
-//    calculate how much overall weight reserved for baggage remains for a flight
